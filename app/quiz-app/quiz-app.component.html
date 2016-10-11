@@ -1,0 +1,19 @@
+<div class="quiz-app container-fluid">
+    <div [ngClass]="getElementClasses()"
+         class="full-height row">
+        <div class="quiz-bg full-height full-width"></div>
+        <div *ngIf="false" class="full-height">
+            <div class="full-height v-center-wrap">
+                <h4 class="v-center" i18n>To use this feature please upgrade to a later Android release. <a class="link" ng-click="main.contactSupport()">Contact support.</a></h4>
+            </div>
+        </div>
+        <div *ngIf="!quizState.initialized" class="full-width full-height">
+            <div class="full-height v-center-wrap">
+                <h4 class="v-center" i18n>Loading...</h4>
+            </div>
+        </div>
+        <ec-quiz-start [quizState]="quizState"></ec-quiz-start>
+        <ec-quiz-question [quizState]="quizState"></ec-quiz-question>
+        <ec-quiz-complete [quizState]="quizState"></ec-quiz-complete>
+    </div>
+</div>

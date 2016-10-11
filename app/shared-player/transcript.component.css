@@ -1,0 +1,8 @@
+.transcript {
+    padding: 5px;
+    font-style: italic;
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}

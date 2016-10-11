@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="e3f01f441c836ebc146d0fa2557ae4bb6c78f12a" datatype="html">
+        <source>To use this feature please upgrade to a later Android release. <x id="START_LINK" ctype="x-a"/>Contact support.<x id="CLOSE_LINK" ctype="x-a"/></source>
+        <target>Para usar esse recurso por favor atualize para uma versão mais recente do Android. <x id="START_LINK" ctype="x-a"/>Entre em contato com o suporte.<x id="CLOSE_LINK" ctype="x-a"/></target>
+      </trans-unit>
+      <trans-unit id="94516fa213706c67ce5a5b5765681d7fb032033a" datatype="html">
+        <source>Loading...</source>
+        <target>Carregando...</target>
+      </trans-unit>
+      <trans-unit id="fea4f2313f55e4bf970e8b313d02e1352cd3cb86" datatype="html">
+        <source>Quiz these <x id="INTERPOLATION"/> words</source>
+        <target>Faça quiz com essas <x id="INTERPOLATION"/> palavras</target>
+        <note priority="1" from="description">Quiz these [N] Words</note>
+      </trans-unit>
+      <trans-unit id="69c5b838e7750df102186d9e991e708840de755e" datatype="html">
+        <source>You have completed this Quiz</source>
+        <target>Você completou esse Quiz</target>
+      </trans-unit>
+      <trans-unit id="9e8498547a34370c4f279d61beac7ad34f69ffd9" datatype="html">
+        <source>Start Quiz</source>
+        <target>Comece o teste</target>
+      </trans-unit>
+      <trans-unit id="8c3a2a74bcbe7d4e2f0951be4892936c396ac5c4" datatype="html">
+        <source>Select the matching definition</source>
+        <target>Selecione a definição correta</target>
+      </trans-unit>
+      <trans-unit id="33b5a7bbf07283a9359980cea70d57b38a2bfc2e" datatype="html">
+        <source>Question <x id="INTERPOLATION"/> of <x id="INTERPOLATION_1"/></source>
+        <target>Pergunta <x id="INTERPOLATION"/> de <x id="INTERPOLATION_1"/></target>
+        <note priority="1" from="description">question X of Y</note>
+      </trans-unit>
+      <trans-unit id="06896cdfc51890395fb1672ff94df6e8ab068f34" datatype="html">
+        <source>Complete!</source>
+        <target>Completo!</target>
+        <note priority="1" from="description">Quiz has been completed message</note>
+      </trans-unit>
+      <trans-unit id="157297e99dcd861676fd94b2ca799ad462371eb3" datatype="html">
+        <source>You got <x id="INTERPOLATION"/> of <x id="INTERPOLATION_1"/> words correct.</source>
+        <target></target>
+        <note priority="1" from="description">You got X of Y words correct</note>
+      </trans-unit>
+      <trans-unit id="996596fdfbfcc7a0e246a3035fe66cc1f910f4c8" datatype="html">
+        <source>Overall grade:</source>
+        <target>Nota geral:</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

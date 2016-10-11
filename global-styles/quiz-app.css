@@ -1,0 +1,77 @@
+.quiz-app .btn {
+    border-radius: 0;
+    font-weight: 600;
+}
+
+.quiz-app .btn:visited,
+.quiz-app .btn:active {
+    border: solid 1px transparent;
+    box-shadow: none;
+}
+
+.quiz-app .note {
+    color: #673AB7;
+    font-weight: 600;
+}
+
+.quiz-app .font-small {
+    font-size: 12px;
+}
+
+.quiz-app .padded {
+    padding: 10px 8px;
+}
+
+.quiz-app .v-center-wrap {
+    display: table;
+}
+
+.quiz-app .v-center {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    padding: 5px;
+}
+
+.quiz-app .full-height {
+    height: 100%;
+}
+
+.quiz-app .full-width {
+    width: 100%;
+}
+
+.quiz-app .nullify {
+    position: relative !important;
+    visibility: hidden;
+}
+
+.quiz-app .layer-1,
+.quiz-app .layer-2,
+.quiz-app .layer-3 {
+    position: relative;
+}
+
+.quiz-app .layer-1 {
+    z-index: 1;
+}
+
+.quiz-app .layer-2 {
+    z-index: 2;
+}
+
+.quiz-app .layer-3 {
+    z-index: 3;
+}
+
+.quiz-app .quiz-question .vjs-big-play-button {
+    border: none;
+    font-size: 2em;
+    width: 2em;
+    margin-left: -1em;
+}
+
+.ios .end-screen .letter-grade {
+    font-family: 'MarkerFelt-Thin';
+    font-size: 50px;
+}

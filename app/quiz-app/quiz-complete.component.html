@@ -1,0 +1,27 @@
+<div *ngIf="quizState.initialized && quizState.completed"
+     class="end-screen full-height full-width">
+    <div class="rays layer-1"></div>
+    <div class="stars-wrap layer-2">
+        <div *ngFor="let star of stars" class="star"></div>
+    </div>
+    <div class="full-height full-width layer-3">
+        <div class="end-screen-img"></div>
+        <div class="end-screen-message text-center">
+            <span i18n="Quiz has been completed message">Complete!</span>
+        </div>
+        <div class="note text-center" i18n="You got X of Y words correct">You got {{quizState.getQuizProgress().getWordsCorrect().length}} of {{quizState.getQuizProgress().getQuizWords().length}} words correct.</div>
+        <div class="note text-center" i18n>Overall grade:</div>
+        <div class="letter-grade text-center">
+            {{quizState.getQuizProgress().getGrade()}}
+        </div>
+        <div class="word-list full-width col-xs-12">
+            <div class="row" *ngFor="let question of quizState.getQuizProgress().getAnsweredQuestions()">
+                <div [class.complete]="question.isAnswerCorrect()"
+                     [class.incomplete]="!question.isAnswerCorrect()"
+                     class="word col-xs-offset-3 col-xs-9 col-sm-offset-5 col-sm-7">
+                    {{question.getWord().wordRootOrthography}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

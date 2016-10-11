@@ -1,0 +1,9 @@
+.quiz-app {
+    overflow: hidden;
+}
+
+.quiz-bg {
+    background-color: #fff;
+    z-index: -1;
+    position: absolute;
+}

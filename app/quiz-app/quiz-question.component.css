@@ -1,0 +1,132 @@
+.questions {
+    overflow: hidden;
+}
+
+.quiz-question {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.question-label {
+    font-weight: 600;
+    padding: 10px 20px 10px;
+    display:inline-block;
+    cursor: pointer;
+}
+
+.question-orthography {
+    width: 100%;
+    font-size: 16px;
+}
+
+.quiz-orthography .icon {
+    padding: 3px 15px;
+    background-image: url("/images/ec3.4/applets/html5-quiz/play-sound-icon.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 24px 24px;
+}
+
+.quiz-orthography.audio-playing {
+    color: #007AFF;
+}
+
+.quiz-orthography.audio-playing .icon {
+    background-image: url("/images/ec3.4/applets/html5-quiz/play-sound-icon-blue.png");
+}
+
+.question-definition {
+    font-size: 14px;
+}
+
+.question-video {
+    height: 120px;
+    width: 220px;
+    margin: auto;
+}
+
+.question-choices {
+    border-top: 1px solid #949494;
+    padding: 5px;
+}
+
+.question-choices .note {
+    padding: 5px 0 10px;
+}
+
+.choice {
+    border-radius: 5px;
+    margin-bottom: 10px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0;
+    font-size: 12px;
+    font-weight: 500;
+    background-color: #949494;
+    color: #fff;
+}
+
+.choice:focus {
+    outline:0;
+}
+
+.choice-label {
+    line-height: 14px;
+    word-break: keep-all;
+    white-space: normal;
+    padding: 0 45px;
+}
+
+.correct {
+    background-image: url("/images/ec3.4/applets/html5-quiz/correct.png");
+    background-position: 10px 4px;
+    background-repeat: no-repeat;
+    background-size: 32px 30px;
+    background-color: #4AAD52;
+}
+
+.incorrect {
+    background-image: url("/images/ec3.4/applets/html5-quiz/incorrect.png");
+    background-position: 10px 4px;
+    background-repeat: no-repeat;
+    background-size: 32px 30px;
+    background-color: #F74231;
+}
+
+.missed {
+    background-color: #4AAD52;
+}
+
+.blur {
+    opacity: 0.5;
+}
+
+
+.progress-wrap {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.progress {
+    margin: 0;
+    border-radius: 0;
+    background-color: transparent;
+    background-image: none;
+    box-shadow: none;
+    height: 5px;
+}
+
+.progress-bar {
+    background-color: #673AB7;
+    background-image: none;
+    height: 5px;
+}
+
+.progress-label {
+    font-weight: 600;
+    padding: 0 5px;
+    font-size: 11px;
+    color: #8d8d8d;
+}

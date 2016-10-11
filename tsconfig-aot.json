@@ -1,0 +1,30 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "target": "es5",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "removeComments": false,
+    "suppressImplicitAnyIndexErrors": true,
+    "declaration": false,
+    "noEmitOnError": true,
+    "noImplicitAny": false,
+    "outDir": "./tmp",
+    "inlineSources": true
+  },
+  "files": [
+    "app/polyfill.ts",
+    "app/vendor.ts",
+    "app/common-app.ts",
+    "app/shared-player.ts",
+    "app/quiz-app.ts",
+    "./typings/index.d.ts"
+  ],
+  "angularCompilerOptions": {
+    "genDir": "aot",
+    "skipMetadataEmit" : true
+  }
+}

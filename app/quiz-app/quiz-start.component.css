@@ -1,0 +1,109 @@
+.splash-header,
+.splash-body,
+.splash-footer {
+    position: absolute;
+    background-color: #fff;
+}
+
+.splash-header,
+.splash-footer {
+    min-height: 50px;
+}
+
+.splash-header {
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #ccc;
+    top: 0;
+}
+
+.splash-header .quiz-title,
+.splash-header .quiz-sub-title {
+    font-weight: 600;
+}
+
+.splash-header .quiz-sub-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+    padding: 0 10px 0 10px;
+}
+
+.splash-body {
+    top: 0;
+    bottom: 50px;
+    /*Set bottom value to HeightOfBottomFrameDiv*/
+    overflow: auto;
+    background: #fff;
+}
+
+.splash-word-list {
+    position: relative;
+}
+
+.splash-word-list .word {
+    position: relative;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 14px;
+    padding: 10px 20px;
+    color: #673ab7;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.splash-word-list .word.done {
+    color: #8D8D8D;
+}
+
+.word-state-icon {
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 5px 14px;
+}
+
+.word-state-icon.correct {
+    background-image: url("/images/ec3.4/applets/html5-quiz/correct.png");
+    background-size: 18px 18px;
+}
+
+.word-state-icon.incorrect {
+    background-image: url("/images/ec3.4/applets/html5-quiz/incorrect.png");
+    background-size: 18px 18px;
+}
+
+.word-state-icon.dormant {
+    background-image: url("/images/ec3.4/applets/html5-quiz/zzz-icon.png");
+    background-size: 23px 20px;
+}
+
+.word-state-icon.mastered {
+    background-image: url("/images/ec3.4/applets/html5-quiz/mastered-icon.png");
+    background-size: 23px 20px;
+}
+
+.word-list-bg {
+    position: fixed;
+    bottom: 30px;
+    right: 7%;
+    background-image: url("/images/ec3.4/applets/html5-quiz/quiz-icon-fade.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 138px;
+    width: 125px;
+    opacity: .5;
+}
+
+.splash-footer,
+.foot-push {
+    height: 60px;
+}
+
+.splash-footer {
+    box-shadow: 0 0px 10px 0px rgba(0, 0, 0, 0.2);
+    border-top: 1px solid #ccc;
+    bottom: 0;
+}
+
+.splash-footer .btn {
+    width: 100%;
+    font-size: 18px;
+}
