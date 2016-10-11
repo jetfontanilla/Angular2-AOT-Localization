@@ -12,6 +12,7 @@ node_modules/
 node/
 tmp/
 aot/
+.awcache
 **/*.ngfactory.ts
 **/*.css.shim.ts
 **/codegen
