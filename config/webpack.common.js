@@ -18,9 +18,6 @@ module.exports = {
     },
 
     resolve: {
-        root: [
-            helpers.root("app")
-        ]
     },
 
     module: {
