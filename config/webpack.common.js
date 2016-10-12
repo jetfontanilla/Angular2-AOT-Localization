@@ -4,12 +4,12 @@ var helpers = require("./helpers");
 
 module.exports = {
     entry: {
-        "common-app": "./app/common-app.ts",
-        "quiz-app": "./app/quiz-app.ts",
-        "common-app.aot": "./app/common-app.aot.ts",
-        "quiz-app.aot": "./app/quiz-app.aot.ts",
-        "vendor": "./app/vendor.ts",
-        "polyfill": "./app/polyfill.ts"
+        "common-app": "./app/common-app.js",
+        "quiz-app": "./app/quiz-app.js",
+        "common-app.aot": "./app/common-app.aot.js",
+        "quiz-app.aot": "./app/quiz-app.aot.js",
+        "vendor": "./app/vendor.js",
+        "polyfill": "./app/polyfill.js"
     },
 
     output: {
@@ -18,7 +18,9 @@ module.exports = {
     },
 
     resolve: {
-        extensions: ["", ".js", ".ts"]
+        root: [
+            helpers.root("app")
+        ]
     },
 
     module: {
@@ -29,8 +31,25 @@ module.exports = {
                 loaders: ["awesome-typescript-loader", "angular2-template-loader"]
             },
             {
+                test: /\.js$/,
+                loader: 'angular2-template-loader'
+            },
+            {
+                test: /\.js$/,
+                loader: 'babel',
+                include: [
+                    /node_modules(\\|\/)@angular/
+                ],
+                exclude: [
+                    /\.umd\.js$/
+                ],
+                query: {
+                    presets: ['es2015']
+                }
+            },
+            {
                 test: /\.html$/,
-                loader: "html"
+                loader: "raw"
             },
             {
                 test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,

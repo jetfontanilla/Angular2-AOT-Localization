@@ -8,7 +8,7 @@
     "build:prod": "npm run lint:ts && npm run clean:ts && npm run compile:aot && npm run build-prod:prod-bundle",
     "clean:ts": "rimraf ./dist",
     "compile:ts": "tsc",
-    "compile:aot": "ngc -p tsconfig-aot.json",
+    "compile:aot": "ngc -p tsconfig-aot.json && ngc",
     "compile:aot:ja": "ngc -p tsconfig-aot.json --i18nFile=./locale/messages.ja.xlf --locale=ja --i18nFormat=xlf",
     "build:dev-bundle": "webpack --config ./config/webpack.dev.js --progress --profile --bail",
     "build:prod-bundle": "webpack --config ./config/webpack.prod.js --progress --profile --bail",

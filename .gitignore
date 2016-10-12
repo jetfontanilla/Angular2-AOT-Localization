@@ -16,6 +16,10 @@ aot/
 **/*.ngfactory.ts
 **/*.css.shim.ts
 **/codegen
+app/*.js
+app/*.map
+app/**/*.js
+app/**/*.map
 
 # OS generated files #
 ######################

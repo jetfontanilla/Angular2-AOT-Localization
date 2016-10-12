@@ -12,7 +12,10 @@
     "declaration": false,
     "noEmitOnError": true,
     "noImplicitAny": false,
-    "outDir": "./tmp",
     "inlineSources": true
+  },
+  "angularCompilerOptions": {
+    "genDir": "aot",
+    "skipMetadataEmit" : true
   }
 }
