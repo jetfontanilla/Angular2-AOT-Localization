@@ -33,6 +33,19 @@ module.exports = {
                 loader: "html"
             },
             {
+                test: /\.js$/,
+                loader: 'babel',
+                include: [
+                    /node_modules(\\|\/)@angular/
+                ],
+                exclude: [
+                    /\.umd\.js$/
+                ],
+                query: {
+                    presets: ['es2015']
+                }
+            },
+            {
                 test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
                 loader: "file?name=assets/[name].[ext]"
             },
