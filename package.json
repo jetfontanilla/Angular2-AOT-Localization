@@ -10,6 +10,7 @@
     "compile:ts": "tsc",
     "compile:aot": "ngc -p tsconfig-aot.json",
     "compile:aot:ja": "ngc -p tsconfig-aot.json --i18nFile=./locale/messages.ja.xlf --locale=ja --i18nFormat=xlf",
+    "compile:aot:ko": "ngc -p tsconfig-aot.json --i18nFile=./locale/messages.ko.xlf --locale=ko --i18nFormat=xlf",
     "build:dev-bundle": "webpack --config ./config/webpack.dev.js --progress --profile --bail",
     "build:prod-bundle": "webpack --config ./config/webpack.prod.js --progress --profile --bail",
     "postinstall": "typings install",
