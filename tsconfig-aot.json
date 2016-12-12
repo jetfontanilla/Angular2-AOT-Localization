@@ -19,7 +19,6 @@
     "app/polyfill.ts",
     "app/vendor.ts",
     "app/common-app.ts",
-    "app/quiz-app.ts",
     "./typings/index.d.ts"
   ],
   "angularCompilerOptions": {

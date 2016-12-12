@@ -7,7 +7,7 @@ import "../rxjs-operators";
 
 @Component({
     selector: "ec-progress-app",
-    template: ""
+    template: "Hello World"
 })
 export class ProgressAppComponent {
     constructor(private progressQueue: ProgressQueueService,

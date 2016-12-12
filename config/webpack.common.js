@@ -5,24 +5,28 @@ var helpers = require("./helpers");
 module.exports = {
     entry: {
         "common-app": "./app/common-app.ts",
-        "quiz-app": "./app/quiz-app.ts",
         "common-app.aot": "./app/common-app.aot.ts",
-        "quiz-app.aot": "./app/quiz-app.aot.ts",
         "vendor": "./app/vendor.ts",
         "polyfill": "./app/polyfill.ts"
     },
 
     output: {
-        path: "./dist/",
+        path: "./dist",
         filename: "[name].js"
     },
 
     resolve: {
-        extensions: ["", ".js", ".ts"]
+        extensions: [".ts", ".js"],
+        alias: {
+            jquery: "jquery/src/jquery",
+            TweenLite: "gsap/src/uncompressed/TweenLite"
+        }
     },
 
     module: {
-        noParse: [/localforage.js$/],
+        noParse: [
+            /localforage.js$/
+        ],
         loaders: [
             {
                 test: /\.ts$/,
@@ -30,20 +34,7 @@ module.exports = {
             },
             {
                 test: /\.html$/,
-                loader: "html"
-            },
-            {
-                test: /\.js$/,
-                loader: 'babel',
-                include: [
-                    /node_modules(\\|\/)@angular/
-                ],
-                exclude: [
-                    /\.umd\.js$/
-                ],
-                query: {
-                    presets: ['es2015']
-                }
+                loader: "html?minimize=false"
             },
             {
                 test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
@@ -54,13 +45,13 @@ module.exports = {
                 loader: "file?name=assets/[name].[ext]"
             },
             {
-                test: /\.(xlf|xmb)$/,
-                loader: "file?name=locale/[name].[ext]"
+                test: /\.(xlf|xmb|xtb)$/,
+                loader: "raw"
             },
             {
                 test: /\.css$/,
                 exclude: helpers.root("app"),
-                loader: ExtractTextPlugin.extract("style", "css?sourceMap")
+                loader: ExtractTextPlugin.extract({fallbackLoader: "style", loader: "css?sourceMap"})
             },
             {
                 test: /\.css$/,
@@ -71,6 +62,15 @@ module.exports = {
     },
 
     plugins: [
+        new webpack.ContextReplacementPlugin(
+            /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
+            __dirname
+        ),
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+            "window.jQuery": "jquery"
+        }),
         new webpack.optimize.CommonsChunkPlugin({
             name: ["vendor", "polyfill"]
         })
